@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Solution {
+    public static int removeDuplicates(int[] n) {
+        int j = 1;
+        for(int i = 1;i < n.length;i++){
+            if(n[i] != n[i-1]){
+                n[j] = n[i];
+                j++;
+            }
+        }
+        return j;
+    }
+    public static void main(String[] args){
+        Scanner st = new Scanner(System.in);
+        int x = st.nextInt();
+        int[] n = new int[x];
+        for(int i = 0;i < x;i++){
+            n[i] = st.nextInt();
+        }
+        Solution obj = new Solution();
+        int res = obj.removeDuplicates(n);
+        System.out.println("n[i]" + res);
+    }
+}

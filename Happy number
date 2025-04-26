@@ -1,0 +1,15 @@
+class Solution {
+    public boolean isHappy(int n) { // 19
+        int cur = n; //19
+        while(cur>9){ //19>9
+            int sum = 0;    
+            while(cur!=0){ //19!=0 
+                int rem = cur%10; //9 2
+                sum += rem*rem;  //9*9 = 81+0 = 81+1 = 82 68 100
+                cur/=10;  //1
+            }
+            cur = sum; //82 //68 //100 //1
+        }
+        return (cur == 1 || cur == 7);
+    }
+}

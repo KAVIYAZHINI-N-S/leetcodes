@@ -1,0 +1,18 @@
+import java.util.*;
+class Solution {
+    public boolean isToeplitzMatrix(int[][] matrix) {
+        Scanner st = new Scanner(System.in);
+        // int row = st.nextInt();
+        // int col = st.nextInt();
+        for(int i = 0;i < matrix.length - 1;i++){
+            int j = 0;
+            for(j = 0;j < matrix[i].length - 1;j++){
+                if(matrix[i][j] != matrix[i + 1][j + 1]){
+                    return false;
+                }
+            }
+
+        }
+        return true;
+    }
+}

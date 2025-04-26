@@ -1,0 +1,20 @@
+class Solution {
+    public static int[] rotate(int[] nums, int k) {
+        int n = nums.length;  //5 [1,2,3,4,5]  //3
+        k %= n;  //3%5 = 3
+        reverse(nums,0,n-1);  //
+        reverse(nums,0,k-1);
+        reverse(nums,k,n-1);
+        return nums;
+    }
+    public static void reverse(int[] n,int st,int ed){
+      //  int[] res = new int[arr.length];
+        while(st < ed){
+            int temp = n[st];
+            n[st] = n[ed];
+            n[ed] = temp;
+            st++;
+            ed--;
+        }
+    }
+}
